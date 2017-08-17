@@ -25,8 +25,12 @@ public class MainActivity extends AppCompatActivity {
         btnAdd.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                double firstNumber = Double.parseDouble(first.getText().toString());
-                double lastNumber = Double.parseDouble(last.getText().toString());
+                double firstNumber = 0.0;
+                double lastNumber = 0.0;
+                if(first.getText().length()>0){
+                    firstNumber = Double.parseDouble(first.getText().toString());
+                    lastNumber = Double.parseDouble(last.getText().toString());
+                }
                 TextView result = (TextView) findViewById(R.id.result);
                 result.setText(Double.toString(firstNumber+lastNumber));
             }
@@ -34,8 +38,12 @@ public class MainActivity extends AppCompatActivity {
         btnSubstract.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                double firstNumber = Double.parseDouble(first.getText().toString());
-                double lastNumber = Double.parseDouble(last.getText().toString());
+                double firstNumber = 0.0;
+                double lastNumber = 0.0;
+                if(first.getText().length()>0){
+                    firstNumber = Double.parseDouble(first.getText().toString());
+                    lastNumber = Double.parseDouble(last.getText().toString());
+                }
                 TextView result = (TextView) findViewById(R.id.result);
                 result.setText(Double.toString(firstNumber-lastNumber));
             }
@@ -43,8 +51,12 @@ public class MainActivity extends AppCompatActivity {
         btnMultiply.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                double firstNumber = Double.parseDouble(first.getText().toString());
-                double lastNumber = Double.parseDouble(last.getText().toString());
+                double firstNumber = 0.0;
+                double lastNumber = 0.0;
+                if(first.getText().length()>0){
+                    firstNumber = Double.parseDouble(first.getText().toString());
+                    lastNumber = Double.parseDouble(last.getText().toString());
+                }
                 TextView result = (TextView) findViewById(R.id.result);
                 result.setText(Double.toString(firstNumber*lastNumber));
             }
@@ -52,8 +64,12 @@ public class MainActivity extends AppCompatActivity {
         btnDivide.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                double firstNumber = Double.parseDouble(first.getText().toString());
-                double lastNumber = Double.parseDouble(last.getText().toString());
+                double firstNumber = 0.0;
+                double lastNumber = 1.0;
+                if(first.getText().length()>0){
+                    firstNumber = Double.parseDouble(first.getText().toString());
+                    lastNumber = Double.parseDouble(last.getText().toString());
+                }
                 TextView result = (TextView) findViewById(R.id.result);
                 result.setText(Double.toString(firstNumber/lastNumber));
             }
